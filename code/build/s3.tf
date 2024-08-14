@@ -6,9 +6,16 @@ resource "aws_s3_bucket" "dev_s3" {
   bucket_prefix = "dev-"
 
   tags = {
-    Environment = "Dev"
-    yor_name    = "dev_s3"
-    yor_trace   = "cb5f3ce7-dde9-47fd-9432-5a7bb07366c8"
+    Environment          = "Dev"
+    yor_name             = "dev_s3"
+    yor_trace            = "cb5f3ce7-dde9-47fd-9432-5a7bb07366c8"
+    git_commit           = "b83978f5722ceee40ca6af03be0586d63b560bb1"
+    git_file             = "code/build/s3.tf"
+    git_last_modified_at = "2024-08-14 16:24:42"
+    git_last_modified_by = "medicalasset@users.noreply.github.com"
+    git_modifiers        = "medicalasset"
+    git_org              = "medicalasset"
+    git_repo             = "prisma-cloud-devsecops-workshop"
   }
 }
 
@@ -18,3 +25,4 @@ resource "aws_s3_bucket_ownership_controls" "dev_s3" {
     object_ownership = "BucketOwnerPreferred"
   }
 }
+
